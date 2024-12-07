@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsAspireHost>true</IsAspireHost>
+    <UserSecretsId>0db9f33c-8efa-4258-a719-e8e41ab621be</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspirant.Hosting.Redis" Version="0.0.4" />
+    <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
+    <PackageReference Include="Aspire.Hosting.Keycloak" Version="9.0.0-preview.5.24551.3" />
+    <PackageReference Include="Aspire.Hosting.RabbitMQ" Version="9.0.0" />
+    <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ServiceA\ServiceA.csproj" />
+    <ProjectReference Include="..\ServiceB\ServiceB.csproj" />
+  </ItemGroup>
+
+</Project>
